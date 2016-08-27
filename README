@@ -1,7 +1,7 @@
 just my linux kernel config
 feel free to use it if you've got:
 UEFI
-RX 6300
+FX 6300
 R9 285
 RT28xx wifi card
 Qualcomm Atheros ethernet controller
