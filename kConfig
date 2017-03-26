@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.10.2 Kernel Configuration
+# Linux/x86 4.10.5 Kernel Configuration
 #
 CONFIG_64BIT=y
 CONFIG_X86_64=y
@@ -589,7 +589,7 @@ CONFIG_HOTPLUG_CPU=y
 # CONFIG_LEGACY_VSYSCALL_EMULATE is not set
 CONFIG_LEGACY_VSYSCALL_NONE=y
 CONFIG_CMDLINE_BOOL=y
-CONFIG_CMDLINE="root=/dev/sda1 slub_debug=P page_poison=1 verbose amd.powerplay=1"
+CONFIG_CMDLINE="root=/dev/sdc2 slub_debug=P page_poison=1 verbose amd.powerplay=1"
 # CONFIG_CMDLINE_OVERRIDE is not set
 # CONFIG_MODIFY_LDT_SYSCALL is not set
 CONFIG_HAVE_LIVEPATCH=y
@@ -3478,6 +3478,7 @@ CONFIG_EFI_RUNTIME_WRAPPERS=y
 # File systems
 #
 CONFIG_DCACHE_WORD_ACCESS=y
+CONFIG_ZFS=y
 CONFIG_FS_IOMAP=y
 CONFIG_EXT2_FS=y
 CONFIG_EXT2_FS_XATTR=y
@@ -4214,3 +4215,4 @@ CONFIG_ARCH_HAS_SG_CHAIN=y
 CONFIG_ARCH_HAS_PMEM_API=y
 CONFIG_ARCH_HAS_MMIO_FLUSH=y
 CONFIG_SBITMAP=y
+CONFIG_SPL=y
