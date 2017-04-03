@@ -16,7 +16,7 @@ foreach pkg(spl zfs)
 	if(!(-e "${zfsbase}/zfssrc/spl-${version}")) then
 		echo "Fetching ${pkg} sources."
 		cd ${zfsbase}/zfssrc
-		wget https://github.com/zfsonlinux/zfs/releases/download/zfs-${zfsversion}/${pkg}-${zfsversion}.tar.gz
+		curl -L -O https://github.com/zfsonlinux/zfs/releases/download/zfs-${zfsversion}/${pkg}-${zfsversion}.tar.gz
 		tar -xf ${pkg}-${zfsversion}.tar.gz
 		rm ${pkg}-${zfsversion}.tar.gz
 	endif
