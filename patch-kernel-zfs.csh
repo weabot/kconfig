@@ -3,7 +3,7 @@
 set zfsversion=0.6.5.9
 
 set kernelpath=/usr/src/linux
-set configpath=/usr/src/kconfig
+set configfile=/usr/src/kconfig/kConfig
 set zfsbase=/usr/src
 
 #create zfssrc
@@ -24,8 +24,7 @@ end
 
 
 #prepare kernel
-cd ${kernelpath}
-cp ${configpath}/kConfig .config
+cp ${configfile} ${kernelpath}/.config
 make prepare
 
 #patch zfs and spl
@@ -37,4 +36,4 @@ foreach file(spl zfs)
 	./copy-builtin ${kernelpath}
 end
 
-cp ${configpath}/kConfig ${kernelpath}/.config
+cp ${configfile} ${kernelpath}/.config
