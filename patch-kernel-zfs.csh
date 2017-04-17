@@ -2,9 +2,11 @@
 
 set zfsversion=0.6.5.9
 
+set kconfigpath=/usr/src/kconfig
 set kernelpath=/usr/src/linux
-set configfile=/usr/src/kconfig/kConfig
-set zfsbase=/usr/src
+
+set configfile=${kconfigpath}/kConfig
+set zfsbase=${kconfigpath}
 
 #create zfssrc
 if(!(-e "${zfsbase}/zfssrc")) then
