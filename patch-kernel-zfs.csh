@@ -15,7 +15,7 @@ endif
 
 #fetch and extract sources if they don't exist
 foreach pkg(spl zfs)
-	if(!(-e "${zfsbase}/zfssrc/spl-${version}")) then
+	if(!(-e "${zfsbase}/zfssrc/${pkg}-${version}")) then
 		echo "Fetching ${pkg} sources."
 		cd ${zfsbase}/zfssrc
 		curl -L -O https://github.com/zfsonlinux/zfs/releases/download/zfs-${zfsversion}/${pkg}-${zfsversion}.tar.gz
