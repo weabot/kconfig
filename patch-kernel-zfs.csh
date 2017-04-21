@@ -26,6 +26,7 @@ end
 
 
 #prepare kernel
+cd ${kernelpath}
 cp ${configfile} ${kernelpath}/.config
 make prepare
 
