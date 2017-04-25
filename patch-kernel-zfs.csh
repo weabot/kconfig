@@ -39,4 +39,10 @@ foreach file(spl zfs)
 	./copy-builtin ${kernelpath}
 end
 
+# setup kernel modules for dracut
+cp ${configpath}/zfsmodules-conf ${kernelpath}/.config
+cd ${kernelpath}
+make -j7 modules
+make modules_install
+
 cp ${configfile} ${kernelpath}/.config
