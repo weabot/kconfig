@@ -14,7 +14,7 @@ To use, copy:
 
 * the contents of systemd/ to /usr/lib/systemd/system or an equivalent that dracut will use. Only necessary if you have the systemd module.
 
-* 90-zfs.rule to /usr/lib/udev/rules.d/ or an equivalent
+* The contents of udev/ to /usr/lib/udev/rules.d/ or an equivalent
 
 If these paths don't match, you'll want to look into replacing them into 90zfs/setup-module.sh. Otherwise, they should be fine being dropped into the right directory.
 

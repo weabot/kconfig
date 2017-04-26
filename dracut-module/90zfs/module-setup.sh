@@ -25,7 +25,6 @@ install() {
 	inst_rules /lib/udev/rules.d/60-zvol.rules
 	dracut_install hostid
 	dracut_install grep
-	dracut_install sed
 	dracut_install /sbin/zfs
 	dracut_install /sbin/zpool
 	dracut_install /sbin/mount.zfs
