@@ -16,6 +16,7 @@ To use, copy:
 
 * 90-zfs.rule to /usr/lib/udev/rules.d/ or an equivalent
 
+If these paths don't match, you'll want to look into replacing them into 90zfs/setup-module.sh. Otherwise, they should be fine being dropped into the right directory.
 
 This module doesn't work like ZFS on Linux's. To use, set your root to zfs like so:
 
