@@ -1,0 +1,16 @@
+[Unit]
+Description=Import ZFS pools from option
+DefaultDependencies=no
+Requires=systemd-udev-settle.service
+After=systemd-udev-settle.service
+After=cryptsetup.target
+Before=dracut-mount.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/sbin/zpool import -f -R /sysroot ${ZPOOL}
+
+[Install]
+WantedBy=zfs-mount.service
+WantedBy=zfs.target
