@@ -15,3 +15,16 @@ To use, copy:
 * the contents of systemd/ to /usr/lib/systemd/system or an equivalent that dracut will use. Only necessary if you have the systemd module.
 
 * 90-zfs.rule to /usr/lib/udev/rules.d/ or an equivalent
+
+
+This module doesn't work like ZFS on Linux's. To use, set your root to zfs like so:
+
+`root=ZFS`
+
+and set your zpool to the pool you want to boot from. It will mount every volume and subvolume in that pool according to their mountpoints.
+
+`zpool=rpool`
+
+An example of a compatible kernel line:
+
+`initrd=/dracut root=ZFS zpool=mypool splash quiet amd.powerplay=1 init=/bin/emacs`
